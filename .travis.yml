@@ -1,0 +1,22 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+sudo: false
+language: java
+jdk: oraclejdk8
+cache:
+  directories:
+   - ${symbol_dollar}HOME/.m2
+   - ${symbol_dollar}HOME/.cache/pip
+   - ${symbol_dollar}HOME/conda
+before_install:
+  - if [ ! -e ${symbol_dollar}HOME/conda/bin/activate ]; then
+    wget -nc https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh;
+    bash Miniconda-latest-Linux-x86_64.sh -f -b -p ${symbol_dollar}HOME/conda;
+    fi
+  - source ${symbol_dollar}HOME/conda/bin/activate root
+  - conda install -y -q pandas protobuf
+install:
+- pip install ${required_python_package}
+install: mvn package -B
+script: xvfb-run mvn verify -B

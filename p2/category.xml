@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/nl.esciencecenter.e3dchem.sygma.feature-1.0.0.jar" id="nl.esciencecenter.e3dchem.sygma.feature" version="1.0.0">
+      <category name="nl.esciencecenter.e3dchem.sygma"/>
+   </feature>
+   <feature url="features/nl.esciencecenter.e3dchem.sygma.feature.source_1.0.0.jar" id="nl.esciencecenter.e3dchem.sygma.feature.source" version="1.0.0">
+      <category name="nl.esciencecenter.e3dchem.sygma.sources"/>
+   </feature>
+   <category-def name="nl.esciencecenter.e3dchem.sygma" label="[Enter Category Label here.]">
+      <description>
+         [Enter Category Description here.]
+      </description>
+   </category-def>
+   <category-def name="nl.esciencecenter.e3dchem.sygma.sources" label="[Enter Sources Category Label here.]">
+      <description>
+        [Enter Sources of Category Description here.]
+      </description>
+   </category-def>
+</site>
