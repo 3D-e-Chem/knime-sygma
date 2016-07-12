@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="nl.esciencecenter.e3dchem.sygma.feature"
-      label="KNIME PredictMetabolites node"
+      label="Sygma KNIME nodes"
       version="1.0.0"
       provider-name="Netherlands eScience Center">
 
