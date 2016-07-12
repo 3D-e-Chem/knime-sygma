@@ -1,8 +1,8 @@
-Knime node skeleton with sample code as described [here](https://tech.knime.org/developer-guide).
+Sygma KNIME nodes. 
 
 [![Build Status](https://travis-ci.org/3D-e-Chem/knime-sygma.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-sygma)
 
-This project uses [Eclipse Tycho](https://www.eclipse.org/tycho/) to perform build steps.
+See https://github.com/ridderl/sygma for Sygma.
 
 # Installation
 
@@ -10,7 +10,7 @@ Requirements:
 
 * KNIME, https://www.knime.org, version 3.1 or higher
 
-Steps to get the PredictMetabolites KNIME node inside KNIME:
+Steps to get the Sygma KNIME nodes inside KNIME:
 
 1. Goto Help > Install new software ... menu
 2. Press add button

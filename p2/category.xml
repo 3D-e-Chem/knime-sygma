@@ -6,14 +6,14 @@
    <feature url="features/nl.esciencecenter.e3dchem.sygma.feature.source_1.0.0.jar" id="nl.esciencecenter.e3dchem.sygma.feature.source" version="1.0.0">
       <category name="nl.esciencecenter.e3dchem.sygma.sources"/>
    </feature>
-   <category-def name="nl.esciencecenter.e3dchem.sygma" label="[Enter Category Label here.]">
+   <category-def name="nl.esciencecenter.e3dchem.sygma" label="Sygma KNIME nodes">
       <description>
-         [Enter Category Description here.]
+         Prediction of drug metabolites
       </description>
    </category-def>
-   <category-def name="nl.esciencecenter.e3dchem.sygma.sources" label="[Enter Sources Category Label here.]">
+   <category-def name="nl.esciencecenter.e3dchem.sygma.sources" label="Sources of Sygma KNIME nodes">
       <description>
-        [Enter Sources of Category Description here.]
+        Source code of Sygma KNIME nodes
       </description>
    </category-def>
 </site>

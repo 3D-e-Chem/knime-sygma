@@ -3,14 +3,14 @@
       id="nl.esciencecenter.e3dchem.sygma.feature"
       label="KNIME PredictMetabolites node"
       version="1.0.0"
-      provider-name="[Enter provider name here.]">
+      provider-name="Netherlands eScience Center">
 
   <description url="https://github.com/3D-e-Chem/knime-sygma">
-     [Enter Feature Description here.]
+     Sygma KNIME nodes for prediction of drug metabolites.
   </description>
 
   <copyright url="http://www.example.com/copyright">
-     [Enter Copyright Description here.]
+     Copyright Netherlands eScience Center 2016
   </copyright>
 
    <license url="https://www.apache.org/licenses/LICENSE-2.0.txt">
