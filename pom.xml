@@ -28,6 +28,7 @@
     <properties>
         <knime.version>3.1</knime.version>
         <knime.update.site>http://update.knime.org/analytics-platform/${knime.version}/</knime.update.site>
+        <knime.community.trusted.update.site>http://update.knime.org/community-contributions/trusted/${knime.version}/</knime.community.trusted.update.site>
         <tycho.version>0.25.0</tycho.version>
         <tycho.extras.version>0.25.0</tycho.extras.version>
         <tycho.test.jvmArgs>-Xmx512m</tycho.test.jvmArgs>
@@ -39,6 +40,11 @@
             <id>knime</id>
             <layout>p2</layout>
             <url>${knime.update.site}</url>
+        </repository>
+        <repository>
+            <id>knime trusted community</id>
+            <layout>p2</layout>
+            <url>${knime.community.trusted.update.site}</url>
         </repository>
         <repository>
             <id>3d-e-chem</id>

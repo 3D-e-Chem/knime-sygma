@@ -14,7 +14,7 @@ Steps to get the PredictMetabolites KNIME node inside KNIME:
 
 1. Goto Help > Install new software ... menu
 2. Press add button
-3. Fill text fields with url of update site which contains this node.
+3. Fill text fields with the `https://3d-e-chem.github.io/updates` update site url.
 4. Select --all sites-- in `work with` pulldown
 5. Select the node
 6. Install software
@@ -42,15 +42,16 @@ Steps to get development environment setup:
 1. Download KNIME SDK from https://www.knime.org/downloads/overview
 2. Install/Extract/start KNIME SDK
 3. Start SDK
-4. Install m2e (Maven integration for Eclipse) + Python wrapper + Test workflows in JUnit
+4. Install m2e (Maven integration for Eclipse) + Python wrapper + Test workflows in JUnit + RDKit
 
     1. Goto Help > Install new software ...
-    2. Make sure Update site http://update.knime.org/analytics-platform/3.1 and https://3d-e-chem.github.io/updates are in the pull down list otherwise add it
+    2. Make sure Update site http://update.knime.org/analytics-platform/3.1 , http://update.knime.org/community-contributions/trusted/3.1 and https://3d-e-chem.github.io/updates are in the pull down list otherwise add it
     3. Select --all sites-- in work with pulldown
     4. Select m2e (Maven integration for Eclipse)
     5. Select `Abstract Python wrapper KNIME node and helpers`
     6. Select `Test Knime workflows from a Junit test`
-    7. Install software & restart
+    7. Select `RDKit KNIME integration`
+    8. Install software & restart
 
 5. Import this repo as an Existing Maven project
 
