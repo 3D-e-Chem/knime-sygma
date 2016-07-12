@@ -15,5 +15,5 @@ before_install:
   - conda install -y -q -c https://conda.anaconda.org/rdkit rdkit pandas protobuf
 install:
 - pip install git+https://github.com/ridderl/sygma.git
-install: mvn package -B
+- mvn package -B
 script: xvfb-run mvn verify -B
