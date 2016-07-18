@@ -1,16 +1,17 @@
-Sygma KNIME nodes. 
+# SyGMa KNIME nodes
+
+The [SyGMa](https://github.com/ridderl/sygma) [KNIME](https://www.knime.org) nodes for the Systematic Generation of potential Metabolites.
 
 [![Build Status](https://travis-ci.org/3D-e-Chem/knime-sygma.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-sygma)
-
-See https://github.com/ridderl/sygma for Sygma.
 
 # Installation
 
 Requirements:
 
 * KNIME, https://www.knime.org, version 3.1 or higher
+* SyGMa Python library, https://github.com/ridderl/sygma
 
-Steps to get the Sygma KNIME nodes inside KNIME:
+Steps to get the SyGMa KNIME nodes inside KNIME:
 
 1. Goto Help > Install new software ... menu
 2. Press add button
@@ -42,7 +43,7 @@ Steps to get development environment setup:
 1. Download KNIME SDK from https://www.knime.org/downloads/overview
 2. Install/Extract/start KNIME SDK
 3. Start SDK
-4. Install m2e (Maven integration for Eclipse) + Python wrapper + Test workflows in JUnit + RDKit
+4. Install m2e (Maven integration for Eclipse) + Python wrapper + Test workflows in JUnit + 3D-e-Chem node category + RDKit
 
     1. Goto Help > Install new software ...
     2. Make sure Update site http://update.knime.org/analytics-platform/3.1 , http://update.knime.org/community-contributions/trusted/3.1 and https://3d-e-chem.github.io/updates are in the pull down list otherwise add it
@@ -50,6 +51,7 @@ Steps to get development environment setup:
     4. Select m2e (Maven integration for Eclipse)
     5. Select `Abstract Python wrapper KNIME node and helpers`
     6. Select `Test Knime workflows from a Junit test`
+    7. Select `Splash & node category for 3D-e-Chem KNIME nodes`
     7. Select `RDKit KNIME integration`
     8. Install software & restart
 
