@@ -52,8 +52,8 @@ Steps to get development environment setup:
     5. Select `Abstract Python wrapper KNIME node and helpers`
     6. Select `Test Knime workflows from a Junit test`
     7. Select `Splash & node category for 3D-e-Chem KNIME nodes`
-    7. Select `RDKit KNIME integration`
-    8. Install software & restart
+    8. Select `RDKit KNIME integration`
+    9. Install software & restart
 
 5. Import this repo as an Existing Maven project
 
