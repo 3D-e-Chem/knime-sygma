@@ -27,6 +27,8 @@ Steps to get the SyGMa KNIME nodes inside KNIME:
 2. Find node in Node navigator panel.
 3. Drag node to workflow canvas.
 
+See example workflow in `examples` folder.
+
 # Build
 
 ```

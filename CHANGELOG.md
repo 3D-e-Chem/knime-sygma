@@ -5,6 +5,11 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+### Added
+
+- Test workflow (#2)
+- Example workflow (#3)
+
 ## [1.0.1] - 2016-07-18 
 
 ### Added
