@@ -14,6 +14,6 @@ before_install:
   - source $HOME/conda/bin/activate root
   - conda install -y -q -c https://conda.anaconda.org/rdkit rdkit pandas protobuf
 install:
-- pip install git+https://github.com/ridderl/sygma.git
+- pip install -U git+https://github.com/ridderl/sygma.git
 - mvn package -B
 script: xvfb-run mvn verify -B
