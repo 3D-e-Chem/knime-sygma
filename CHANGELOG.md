@@ -5,10 +5,16 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [1.0.2] - 2016-08-15
+
 ### Added
 
-- Test workflow (#2)
+- Test workflows (#2)
 - Example workflow (#3)
+
+### Removed
+
+- Redundant column "parent" from output_table
 
 ## [1.0.1] - 2016-07-18 
 
