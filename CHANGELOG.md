@@ -5,6 +5,13 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [1.1.0] - 2016-09-01
+
+### Changed
+
+- Renamed `Predict metabolites` node to `Metabolite Predictor` (#5)
+- Renamed example workflow (#4)
+
 ## [1.0.2] - 2016-08-15
 
 ### Added

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/nl.esciencecenter.e3dchem.sygma.feature-1.0.2.jar" id="nl.esciencecenter.e3dchem.sygma.feature" version="1.0.2">
+   <feature url="features/nl.esciencecenter.e3dchem.sygma.feature-1.1.0.jar" id="nl.esciencecenter.e3dchem.sygma.feature" version="1.1.0">
       <category name="nl.esciencecenter.e3dchem.sygma"/>
    </feature>
-   <feature url="features/nl.esciencecenter.e3dchem.sygma.feature.source_1.0.2.jar" id="nl.esciencecenter.e3dchem.sygma.feature.source" version="1.0.2">
+   <feature url="features/nl.esciencecenter.e3dchem.sygma.feature.source_1.1.0.jar" id="nl.esciencecenter.e3dchem.sygma.feature.source" version="1.1.0">
       <category name="nl.esciencecenter.e3dchem.sygma.sources"/>
    </feature>
    <category-def name="nl.esciencecenter.e3dchem.sygma" label="Sygma KNIME nodes">
