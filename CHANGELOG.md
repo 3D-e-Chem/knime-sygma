@@ -5,9 +5,11 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [1.1.1] - 2016-09-06
+
 ### Changed
 
-- Feature in 3d-e-chem p2 category
+- Feature in 3d-e-chem p2 update site category
 
 ## [1.1.0] - 2016-09-01
 
