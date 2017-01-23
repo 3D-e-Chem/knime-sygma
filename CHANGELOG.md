@@ -5,6 +5,13 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [1.1.3] - 2017-01-23
+
+### Changed
+
+- sygma Python package install instructions in node description (#8)
+- Better error message when Python package is not found (#8)
+
 ## [1.1.2] - 2017-01-20
 
 ### Changed
