@@ -1,6 +1,6 @@
 # SyGMa KNIME nodes
 
-The [SyGMa](https://github.com/ridderl/sygma) [KNIME](https://www.knime.org) nodes for the **Sy**stematic **G**eneration of potential **M**et**a**bolites.
+The [SyGMa](https://github.com/3D-e-Chem/sygma) [KNIME](https://www.knime.org) nodes for the **Sy**stematic **G**eneration of potential **M**et**a**bolites.
 
 [![Build Status](https://travis-ci.org/3D-e-Chem/knime-sygma.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-sygma)
 
@@ -9,7 +9,7 @@ The [SyGMa](https://github.com/ridderl/sygma) [KNIME](https://www.knime.org) nod
 Requirements:
 
 * KNIME, https://www.knime.org, version 3.1 or higher
-* SyGMa Python library, https://github.com/ridderl/sygma
+* SyGMa Python library, https://github.com/3D-e-Chem/sygma
 
 Steps to get the SyGMa KNIME nodes inside KNIME:
 

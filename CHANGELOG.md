@@ -5,11 +5,22 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
-## [1.1.1] - 2016-09-06
+## [1.1.2] - 2017-01-20
 
 ### Changed
 
+- Adjust SyGMa homepage URL (#6)
+- Renamed `Metabolite Predictor` node to `SyGMa Metabolites` (#11)
+
+## [1.1.1] - 2017-01-20
+
+### Added
+
 - Feature in 3d-e-chem p2 update site category
+
+### Changed
+
+- Update site was one version ahead - skip to 1.1.2
 
 ## [1.1.0] - 2016-09-01
 
