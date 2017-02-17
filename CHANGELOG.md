@@ -5,6 +5,10 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+### Fixed
+
+- Input smiles type gets converted to string (#7)
+
 ## [1.1.4] - 2017-09-02
 
 Switched to GPLv3 license due to license of [Python wrapper](https://github.com/3D-e-Chem/knime-python-wrapper) dependency.
