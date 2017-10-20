@@ -3,6 +3,7 @@
 The [SyGMa](https://github.com/3D-e-Chem/sygma) [KNIME](https://www.knime.org) nodes for the **Sy**stematic **G**eneration of potential **M**et**a**bolites.
 
 [![Build Status](https://travis-ci.org/3D-e-Chem/knime-sygma.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-sygma)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1033753.svg)](https://doi.org/10.5281/zenodo.1033753)
 
 # Installation
 
