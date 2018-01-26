@@ -20,11 +20,11 @@ Steps to get the SyGMa KNIME nodes inside KNIME:
 4. Select --all sites-- in `work with` pulldown
 5. Select the node
 6. Install software
-7. Restart Knime
+7. Restart KNIME
 
 # Usage
 
-1. Create a new Knime workflow.
+1. Create a new KNIME workflow.
 2. Find node in Node navigator panel.
 3. Drag node to workflow canvas.
 
@@ -79,8 +79,7 @@ See https://github.com/3D-e-Chem/knime-testflow#3-add-test-workflow
 # New release
 
 1. Update versions in pom files with `mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=<version>` command.
-2. Manually update version of "source" feature in `p2/category.xml` file.
-3. Commit and push changes
+2. Commit and push changes
 3. Create package with `mvn package`, will create update site in `p2/target/repository`
 4. Append new release to an update site
   1. Make clone of an update site repo
