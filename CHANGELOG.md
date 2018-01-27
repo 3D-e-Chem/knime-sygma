@@ -5,6 +5,12 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [1.2.0]
+
+### Changed
+
+- Switch to new Python wrapper, now possible to use Python3 aswell
+
 ## [1.1.5] - 2017-02-17
 
 ### Fixed
