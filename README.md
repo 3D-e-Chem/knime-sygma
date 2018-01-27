@@ -48,19 +48,35 @@ Steps to get development environment setup:
 3. Start SDK
 4. Install m2e (Maven integration for Eclipse) + Python wrapper + Test workflows in JUnit + 3D-e-Chem node category + RDKit
 
-    1. Goto Help > Install new software ...
-    2. Make sure Update site http://update.knime.org/analytics-platform/3.1 , http://update.knime.org/community-contributions/trusted/3.1 and https://3d-e-chem.github.io/updates are in the pull down list otherwise add it
-    3. Select --all sites-- in work with pulldown
-    4. Select m2e (Maven integration for Eclipse)
-    5. Select `Abstract Python wrapper KNIME node and helpers`
-    6. Select `Test Knime workflows from a Junit test`
-    7. Select `Splash & node category for 3D-e-Chem KNIME nodes`
-    8. Select `RDKit KNIME integration`
+	
+	1. Goto Window -> Preferences -> Install/Update -> Available Software Sites
+    2. Make sure the following Software Sites (or a version of them) are present otherwise add them:
+
+      * http://update.knime.org/analytics-platform/3.5
+      * http://update.knime.org/community-contributions/trusted/3.5
+      * https://3d-e-chem.github.io/updates
+      * http://download.eclipse.org/eclipse/updates/4.6
+      * http://download.eclipse.org/releases/neon
+
+    3. Goto Help -> Check for updates
+    4. Install any updates found & restart
+    5. Goto Help > Install new software ...
+    6. Select --All Available sites-- in work with pulldown
+    7. Wait for list to be filled, `Pending...` should disappear
+    8. Select the following items:
+
+		* Abstract Python wrapper KNIME node and helpers
+    	* Test Knime workflows from a Junit test
+    	* Splash & node category for 3D-e-Chem KNIME nodes
+    	* RDKit KNIME integration
+    	* KNIME Base Chemistry Types & Nodes
+    	* Test Knime workflows from a Junit test
+    	
     9. Install software & restart
 
 5. Import this repo as an Existing Maven project
 
-During import the Tycho Eclipse providers must be installed.
+After the import the Maven plugin connections must be setup, a Discover m2e connections dialog will popup to install all requested connectors, after the installation restart eclipse.
 
 ## Tests
 
@@ -78,7 +94,7 @@ See https://github.com/3D-e-Chem/knime-testflow#3-add-test-workflow
 
 # New release
 
-1. Update versions in pom files with `mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=<version>` command.
+1. Update versions in pom files with `mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=<version>-SNAPSHOT` command.
 2. Commit and push changes
 3. Create package with `mvn package`, will create update site in `p2/target/repository`
 4. Append new release to an update site
