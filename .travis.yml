@@ -10,7 +10,7 @@ cache:
 before_install:
   - if [ ! -e $HOME/conda/bin/activate ]; then
     wget -nc https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh;
-    bash Miniconda-latest-Linux-x86_64.sh -f -b -p $HOME/conda;
+    bash Miniconda3-latest-Linux-x86_64.sh -f -b -p $HOME/conda;
     fi
   - source $HOME/conda/bin/activate root
   - conda install -y -q -c rdkit -c 3d-e-Chem sygma pandas protobuf
