@@ -13,7 +13,8 @@ before_install:
     bash Miniconda3-latest-Linux-x86_64.sh -f -b -p $HOME/conda;
     fi
   - source $HOME/conda/bin/activate root
-  - conda install -y -q -c rdkit -c 3d-e-Chem sygma pandas protobuf
+  - conda install -y -q -c rdkit rdkit pandas protobuf
+  - pip install sygma
 install:
 - mvn package -B
 script: xvfb-run mvn verify -B
