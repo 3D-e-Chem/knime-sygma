@@ -6,6 +6,7 @@ cache:
    - $HOME/.m2
    - $HOME/.cache/pip
    - $HOME/conda
+   - $HOME/.sonar/cache
 before_install:
   - if [ ! -e $HOME/conda/bin/activate ]; then
     wget -nc https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh;
@@ -16,3 +17,6 @@ before_install:
 install:
 - mvn package -B
 script: xvfb-run mvn verify -B
+after_success:
+ - mvn sonar:sonar -Dsonar.login=$SONAR_TOKEN
+
