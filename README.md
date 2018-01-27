@@ -3,8 +3,8 @@
 The [SyGMa](https://github.com/3D-e-Chem/sygma) [KNIME](https://www.knime.org) nodes for the **Sy**stematic **G**eneration of potential **M**et**a**bolites.
 
 [![Build Status](https://travis-ci.org/3D-e-Chem/knime-sygma.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-sygma)
-[![SonarCloud Gate](https://sonarcloud.io/api/badges/gate?key=nl.esciencecenter.e3dchem.sygma:nl.esciencecenter.e3dchem.sygma)](https://sonarcloud.io/dashboa$
-[![SonarCloud Coverage](https://sonarcloud.io/api/badges/measure?key=nl.esciencecenter.e3dchem.sygma:nl.esciencecenter.e3dchem.sygma&metric=coverage)](https:$
+[![SonarCloud Gate](https://sonarcloud.io/api/badges/gate?keynl.esciencecenter.e3dchem.sygma:nl.esciencecenter.e3dchem.sygma)](https://sonarcloud.io/dashboard?idnl.esciencecenter.e3dchem.sygma:nl.esciencecenter.e3dchem.sygma)
+[![SonarCloud Coverage](https://sonarcloud.io/api/badges/measure?keynl.esciencecenter.e3dchem.sygma:nl.esciencecenter.e3dchem.sygma&metric=coverage)](https://sonarcloud.io/component_measures/domain/Coverage?idnl.esciencecenter.e3dchem.sygma:nl.esciencecenter.e3dchem.sygma)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1033753.svg)](https://doi.org/10.5281/zenodo.1033753)
 
 # Installation
