@@ -7,9 +7,13 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [1.2.0]
 
+### Added
+
+- SyGMa icon (#12)
+
 ### Changed
 
-- Switch to new Python wrapper, now possible to use Python3 aswell
+- Switch to new Python wrapper, now possible to use Python3 aswell (#13)
 
 ## [1.1.5] - 2017-02-17
 
