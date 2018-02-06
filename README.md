@@ -38,7 +38,7 @@ See example workflow in `examples` folder.
 mvn verify
 ```
 
-An Eclipse update site will be made in `p2/target/repository` repository.
+An Eclipse update site will be made in `p2/target/repository` directory.
 The update site can be used to perform a local installation.
 
 # Development
@@ -51,7 +51,7 @@ Steps to get development environment setup:
 4. Install m2e (Maven integration for Eclipse) + Python wrapper + Test workflows in JUnit + 3D-e-Chem node category + RDKit
 
 	
-	1. Goto Window -> Preferences -> Install/Update -> Available Software Sites
+    1. Goto Window -> Preferences -> Install/Update -> Available Software Sites
     2. Make sure the following Software Sites (or a version of them) are present otherwise add them:
 
       * http://update.knime.org/analytics-platform/3.5
@@ -67,12 +67,12 @@ Steps to get development environment setup:
     7. Wait for list to be filled, `Pending...` should disappear
     8. Select the following items:
 
-		* Abstract Python wrapper KNIME node and helpers
-    	* Test Knime workflows from a Junit test
-    	* Splash & node category for 3D-e-Chem KNIME nodes
-    	* RDKit KNIME integration
-    	* KNIME Base Chemistry Types & Nodes
-    	* Test Knime workflows from a Junit test
+	* Abstract Python wrapper KNIME node and helpers
+	* Test Knime workflows from a Junit test
+	* Splash & node category for 3D-e-Chem KNIME nodes
+	* RDKit KNIME integration
+	* KNIME Base Chemistry Types & Nodes
+	* Test Knime workflows from a Junit test
     	
     9. Install software & restart
 
@@ -85,6 +85,7 @@ After the import the Maven plugin connections must be setup, a Discover m2e conn
 Tests for the node are in `tests/src` directory.
 Tests can be executed with `mvn verify`, they will be run in a separate KNIME environment.
 Test results will be written to `test/target/surefire-reports` directory.
+Code coverage reports (html+xml) can be found in the `tests/target/jacoco/report/` directory.
 
 ### Unit tests
 
@@ -93,6 +94,11 @@ Unit tests written in Junit4 format can be put in `tests/src/java`.
 ### Workflow tests
 
 See https://github.com/3D-e-Chem/knime-testflow#3-add-test-workflow
+
+## Speed up builds
+
+Running mvn commands can take a long time as Tycho fetches indices of all p2 update sites.
+This can be skipped by running maven offline using `mvn -o`.
 
 # New release
 
