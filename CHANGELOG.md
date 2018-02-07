@@ -5,7 +5,7 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
-## [1.2.0]
+## [1.2.0] - 2018-02-07
 
 ### Added
 
@@ -13,7 +13,7 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ### Changed
 
-- Switch to new Python wrapper, now possible to use Python3 aswell (#13)
+- Switch to new Python wrapper, now possible to also use Python version 3 (#13)
 
 ## [1.1.5] - 2017-02-17
 
