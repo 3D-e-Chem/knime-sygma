@@ -15,6 +15,10 @@ The file is formatted as described on http://keepachangelog.com/.
 
 - Switch to new Python wrapper, now possible to also use Python version 3 (#13)
 
+### Fixed
+
+- Some molecules cause freeze of node (#13)
+
 ## [1.1.5] - 2017-02-17
 
 ### Fixed
