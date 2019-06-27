@@ -3,15 +3,15 @@
 The [SyGMa](https://github.com/3D-e-Chem/sygma) [KNIME](https://www.knime.org) nodes for the **Sy**stematic **G**eneration of potential **M**et**a**bolites.
 
 [![Build Status](https://travis-ci.org/3D-e-Chem/knime-sygma.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-sygma)
-[![SonarCloud Gate](https://sonarcloud.io/api/badges/gate?key=nl.esciencecenter.e3dchem.sygma:nl.esciencecenter.e3dchem.sygma)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.sygma%3Anl.esciencecenter.e3dchem.sygma)
-[![SonarCloud Coverage](https://sonarcloud.io/api/badges/measure?key=nl.esciencecenter.e3dchem.sygma:nl.esciencecenter.e3dchem.sygma&metric=coverage)](https://sonarcloud.io/component_measures/domain/Coverage?id=nl.esciencecenter.e3dchem.sygma:nl.esciencecenter.e3dchem.sygma)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nl.esciencecenter.e3dchem.sygma%3Anl.esciencecenter.e3dchem.sygma&metric=alert_status)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.sygma%3Anl.esciencecenter.e3dchem.sygma)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=nl.esciencecenter.e3dchem.sygma%3Anl.esciencecenter.e3dchem.sygma&metric=coverage)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.sygma%3Anl.esciencecenter.e3dchem.sygma)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1033753.svg)](https://doi.org/10.5281/zenodo.1033753)
 
 # Installation
 
 Requirements:
 
-* KNIME, https://www.knime.org, version 3.1 or higher
+* KNIME, https://www.knime.org, version 4.0 or higher
 * SyGMa Python library, https://github.com/3D-e-Chem/sygma
 
 Steps to get the SyGMa KNIME nodes inside KNIME:
@@ -43,42 +43,15 @@ The update site can be used to perform a local installation.
 
 # Development
 
-Steps to get development environment setup:
+Steps to get development environment setup based on https://github.com/knime/knime-sdk-setup#sdk-setup:
 
-1. Download KNIME SDK from https://www.knime.org/downloads/overview
-2. Install/Extract/start KNIME SDK
-3. Start SDK
-4. Install m2e (Maven integration for Eclipse) + Python wrapper + Test workflows in JUnit + 3D-e-Chem node category + RDKit
+1. Install Java 8
+2. Install Eclipse for [RCP and RAP developers](https://www.eclipse.org/downloads/packages/release/2018-12/r/eclipse-ide-rcp-and-rap-developers)
+3. Configure Java 8 inside Eclipse Window > Preferences > Java > Installed JREs
+4. Import this repo as an Existing Maven project
+5. Activate target platform by going to Window > Preferences > Plug-in Development > Target Platform and check the `KNIME Analytics Platform (4.0) - nl.esciencecenter.e3dchem.sygma.targetplatform/KNIME-AP-4.0.target` target definition.
 
-	
-    1. Goto Window -> Preferences -> Install/Update -> Available Software Sites
-    2. Make sure the following Software Sites (or a version of them) are present otherwise add them:
-
-      * http://update.knime.org/analytics-platform/3.5
-      * http://update.knime.org/community-contributions/trusted/3.5
-      * https://3d-e-chem.github.io/updates
-      * http://download.eclipse.org/eclipse/updates/4.6
-      * http://download.eclipse.org/releases/neon
-
-    3. Goto Help -> Check for updates
-    4. Install any updates found & restart
-    5. Goto Help > Install new software ...
-    6. Select --All Available sites-- in work with pulldown
-    7. Wait for list to be filled, `Pending...` should disappear
-    8. Select the following items:
-
-	* Abstract Python wrapper KNIME node and helpers
-	* Test Knime workflows from a Junit test
-	* Splash & node category for 3D-e-Chem KNIME nodes
-	* RDKit KNIME integration
-	* KNIME Base Chemistry Types & Nodes
-	* Test Knime workflows from a Junit test
-    	
-    9. Install software & restart
-
-5. Import this repo as an Existing Maven project
-
-After the import the Maven plugin connections must be setup, a Discover m2e connections dialog will popup to install all requested connectors, after the installation restart eclipse.
+During import the Tycho Eclipse providers must be installed.
 
 ## Tests
 
@@ -103,11 +76,16 @@ This can be skipped by running maven offline using `mvn -o`.
 # New release
 
 1. Update versions in pom files with `mvn org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=<version>-SNAPSHOT` command.
-2. Commit and push changes
-3. Create package with `mvn package`, will create update site in `p2/target/repository`
-4. Append new release to an update site
+2. Create package with `mvn package`, will create update site in `p2/target/repository`
+3. Run tests with `mvn verify`
+4. Optionally, test node by installing it in KNIME from a local update site
+5. Append new release to an update site
   1. Make clone of an update site repo
   2. Append release to the update site with `mvn install -Dtarget.update.site=<path to update site>`
-5. Commit and push changes in this repo and update site repo.
-6. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
+6. Commit and push changes in this repo and update site repo.
+7. Create a GitHub release
+8. Update Zenodo entry
+  1. Correct authors
+9. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
+10. Update CITIATION.cff with new DOI
 
