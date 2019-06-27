@@ -5,6 +5,12 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [1.2.1] - 2019-06-27
+
+### Changes
+
+- Requires KNIME 4.0 ([#14](https://github.com/3D-e-Chem/knime-sygma/issues/14))
+
 ## [1.2.0] - 2018-02-07
 
 ### Added
