@@ -2,7 +2,7 @@
 
 The [SyGMa](https://github.com/3D-e-Chem/sygma) [KNIME](https://www.knime.org) nodes for the **Sy**stematic **G**eneration of potential **M**et**a**bolites.
 
-[![Build Status](https://travis-ci.org/3D-e-Chem/knime-sygma.svg?branch=master)](https://travis-ci.org/3D-e-Chem/knime-sygma)
+[![Java CI with Maven](https://github.com/3D-e-Chem/knime-sygma/workflows/Java%20CI%20with%20Maven/badge.svg)](https://github.com/3D-e-Chem/knime-sygma/actions?query=workflow%3A%22Java+CI+with+Maven%22)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nl.esciencecenter.e3dchem.sygma%3Anl.esciencecenter.e3dchem.sygma&metric=alert_status)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.sygma%3Anl.esciencecenter.e3dchem.sygma)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=nl.esciencecenter.e3dchem.sygma%3Anl.esciencecenter.e3dchem.sygma&metric=coverage)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.sygma%3Anl.esciencecenter.e3dchem.sygma)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1168387.svg)](https://doi.org/10.5281/zenodo.1168387)
@@ -11,8 +11,8 @@ The [SyGMa](https://github.com/3D-e-Chem/sygma) [KNIME](https://www.knime.org) n
 
 Requirements:
 
-* KNIME, https://www.knime.org, version 4.0 or higher
-* SyGMa Python library, https://github.com/3D-e-Chem/sygma
+- KNIME, https://www.knime.org, version 4.0 or higher
+- SyGMa Python library, https://github.com/3D-e-Chem/sygma
 
 Steps to get the SyGMa KNIME nodes inside KNIME:
 
@@ -81,12 +81,11 @@ This can be skipped by running maven offline using `mvn -o`.
 3. Run tests with `mvn verify`
 4. Optionally, test node by installing it in KNIME from a local update site
 5. Append new release to an update site
-  1. Make clone of an update site repo
-  2. Append release to the update site with `mvn install -Dtarget.update.site=<path to update site>`
-6. Commit and push changes in this repo and update site repo.
-7. Create a GitHub release
-8. Update Zenodo entry
-  1. Correct authors
-9. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
-10. Update CITIATION.cff with new DOI
-
+6. Make clone of an update site repo
+7. Append release to the update site with `mvn install -Dtarget.update.site=<path to update site>`
+8. Commit and push changes in this repo and update site repo.
+9. Create a GitHub release
+10. Update Zenodo entry
+11. Correct authors
+12. Make nodes available to 3D-e-Chem KNIME feature by following steps at https://github.com/3D-e-Chem/knime-node-collection#new-release
+13. Update CITIATION.cff with new DOI
