@@ -40,7 +40,7 @@ jobs:
         path: |
           ~/conda_pkgs_dir
           ~/.cache/pip
-        key: ${{ runner.os }}-${{ hashFiles('.github/workflows/build.yml') }}
+        key: ${{ runner.os }}-pip-${{ hashFiles('.github/workflows/build.yml') }}
         restore-keys: ${{ runner.os }}-pip
     - name: OS dependencies
       run: sudo apt-get install xvfb
