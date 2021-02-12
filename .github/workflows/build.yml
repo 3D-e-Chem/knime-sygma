@@ -23,8 +23,7 @@ jobs:
       uses: conda-incubator/setup-miniconda@v2
       with:
         auto-update-conda: true
-        auto-activate-base: true
-        activate-environment: ""
+        python-version: 3.8
     - name: Cache deps
       uses: actions/cache@v2
       with:
@@ -36,6 +35,9 @@ jobs:
       run: sudo apt-get install xvfb
     - name: Conda dependencies
       run: conda install -y -q -c conda-forge pip wheel rdkit pandas protobuf
+    - run: which conda
+    - run: which python
+    - run: which pip
     - name: Python dependencies
       run: pip install sygma
     - name: Build with Maven
