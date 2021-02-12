@@ -28,21 +28,24 @@ jobs:
         auto-update-conda: true
         activate-environment: test
         python-version: 3.8
-    - name: Cache deps
+    - name: Cache Maven packages
+      uses: actions/cache@v2
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml', '**/MANIFEST.MF', 'targetplatform/*.target') }}
+        restore-keys: ${{ runner.os }}-m2
+    - name: Cache conda deps
       uses: actions/cache@v2
       with:
         path: |
-          ~/.m2
           ~/conda_pkgs_dir
+          ~/.cache/pip
         key: ${{ runner.os }}-${{ hashFiles('.github/workflows/build.yml') }}
+        restore-keys: ${{ runner.os }}-pip
     - name: OS dependencies
       run: sudo apt-get install xvfb
     - name: Conda dependencies
       run: conda install -y -q -c conda-forge pip wheel rdkit pandas protobuf
-    - run: which conda
-    - run: conda env list
-    - run: which python
-    - run: which pip
     - name: Python dependencies
       run: pip install sygma
     - name: Build with Maven
@@ -50,4 +53,7 @@ jobs:
     - name: Run tests
       run: xvfb-run mvn verify -B
     - name: SonarCloud analysis
-      run: mvn sonar:sonar -Dsonar.login=$SONAR_TOKEN
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      run: mvn sonar:sonar
