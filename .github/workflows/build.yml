@@ -33,7 +33,9 @@ jobs:
     - name: OS dependencies
       run: sudo apt-get install xvfb
     - name: Conda dependencies
-      run: conda install -y -q -c conda-forge rdkit pandas protobuf
+      run: conda install -y -q -c conda-forge pip wheel rdkit pandas protobuf
+    - run: pip list
+    - run: echo 'from rdkit.Chem.inchi import INCHI_AVAILABLE;print(INCHI_AVAILABLE)' | python  -
     - name: Python dependencies
       run: pip install sygma
     - name: Build with Maven
