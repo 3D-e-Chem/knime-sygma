@@ -21,21 +21,21 @@ jobs:
         java-version: 1.8
     - name: Setup miniconda
       uses: conda-incubator/setup-miniconda@v2
-    # - name: Cache deps
-    #   uses: actions/cache@v2
-    #   with:
-    #     path: |
-    #       ~/.m2
-    #       ~/.cache/pip
-    #       ~/conda_pkgs_dir
-    #       ~/.sonar/cache
-    #     key: ${{ runner.os }}-${{ hashFiles('.github/workflows/build.yml') }}
+      with:
+        auto-update-conda: true
+        auto-activate-base: true
+        activate-environment: ""
+    - name: Cache deps
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/.m2
+          ~/conda_pkgs_dir
+        key: ${{ runner.os }}-${{ hashFiles('.github/workflows/build.yml') }}
     - name: OS dependencies
       run: sudo apt-get install xvfb
     - name: Conda dependencies
       run: conda install -y -q -c conda-forge pip wheel rdkit pandas protobuf
-    - run: pip list
-    - run: echo 'from rdkit.Chem.inchi import INCHI_AVAILABLE;print(INCHI_AVAILABLE)' | python  -
     - name: Python dependencies
       run: pip install sygma
     - name: Build with Maven
