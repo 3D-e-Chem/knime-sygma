@@ -2,7 +2,7 @@
 
 The [SyGMa](https://github.com/3D-e-Chem/sygma) [KNIME](https://www.knime.org) nodes for the **Sy**stematic **G**eneration of potential **M**et**a**bolites.
 
-![Java CI with Maven](https://github.com/3D-e-Chem/knime-sygma/workflows/Java%20CI%20with%20Maven/badge.svg)
+[![Java CI with Maven](https://github.com/3D-e-Chem/knime-sygma/workflows/Java%20CI%20with%20Maven/badge.svg)](https://github.com/3D-e-Chem/knime-sygma/actions?query=workflow%3A%22Java+CI+with+Maven%22)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nl.esciencecenter.e3dchem.sygma%3Anl.esciencecenter.e3dchem.sygma&metric=alert_status)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.sygma%3Anl.esciencecenter.e3dchem.sygma)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=nl.esciencecenter.e3dchem.sygma%3Anl.esciencecenter.e3dchem.sygma&metric=coverage)](https://sonarcloud.io/dashboard?id=nl.esciencecenter.e3dchem.sygma%3Anl.esciencecenter.e3dchem.sygma)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1168387.svg)](https://doi.org/10.5281/zenodo.1168387)
