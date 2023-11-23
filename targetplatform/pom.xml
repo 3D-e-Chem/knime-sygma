@@ -20,7 +20,7 @@ Contributors:
 	<parent>
 		<artifactId>nl.esciencecenter.e3dchem.sygma</artifactId>
 		<groupId>nl.esciencecenter.e3dchem.sygma</groupId>
-		<version>2.0.0-SNAPSHOT</version>
+		<version>3.0.0-SNAPSHOT</version>
 	</parent>
 
 </project>
