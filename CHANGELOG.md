@@ -6,6 +6,13 @@ The file is formatted as described on http://keepachangelog.com/.
 
 ## [Unreleased]
 
+## [3.0.0] - 2023-11-23
+
+### Changed
+
+- Support KNIME 5.1
+- Replaced `knime-python-wrapper` dependency with calling `sygma` executable.
+
 ## [2.0.0] - 2021-02-12
 
 ### Fixed
