@@ -12,6 +12,7 @@ The file is formatted as described on http://keepachangelog.com/.
 
 - Support KNIME 5.1
 - Replaced `knime-python-wrapper` dependency with calling `sygma` executable.
+- Simplified input/output from molecule types to strings.
 
 ## [2.0.0] - 2021-02-12
 
