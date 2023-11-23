@@ -15,6 +15,5 @@ authors:
 - given-names: Albert
   family-names: J. Kooistra
   affiliation: UMC Nijmegen
-date-released: 2021-02-12
 repository-code: https://github.com/3D-e-Chem/knime-sygma
 license: GPL-3.0

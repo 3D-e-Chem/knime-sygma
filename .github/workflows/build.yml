@@ -5,10 +5,10 @@ name: Java CI with Maven
 
 on:
   push:
+    branches:
+      - master
   pull_request:
-    types:
-      - "opened"
-      - "reopened"
+    types: [opened, synchronize, reopened]
 
 jobs:
   build:
@@ -17,47 +17,27 @@ jobs:
       run:
         shell: bash -l {0}
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
+    - uses: actions/checkout@v3
       with:
-        java-version: 1.8
-    - name: Setup miniconda
-      uses: conda-incubator/setup-miniconda@v2
+        fetch-depth: 0
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
       with:
-        auto-update-conda: true
-        activate-environment: test
-        python-version: 3.8
-    - name: Cache Maven packages
-      uses: actions/cache@v2
+        java-version: 17
+        distribution: 'temurin'
+        cache: maven
+    - uses: mamba-org/setup-micromamba@v1
       with:
-        path: ~/.m2
-        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml', '**/MANIFEST.MF', 'targetplatform/*.target') }}
-        restore-keys: ${{ runner.os }}-m2
-    - name: Cache conda deps
-      uses: actions/cache@v2
-      with:
-        path: |
-          ~/conda_pkgs_dir
-          ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('.github/workflows/build.yml') }}
-        restore-keys: ${{ runner.os }}-pip
-    - name: OS dependencies
-      run: sudo apt-get install xvfb
-    - name: Conda dependencies
-      run: conda install -y -q -c conda-forge pip wheel rdkit pandas protobuf
+        environment-name: test-env
+        create-args: >-
+          python=3.10
+          rdkit
     - name: Python dependencies
       run: pip install sygma
     - name: Build with Maven
       run: mvn -B package
-    - name: Run tests
-      run: xvfb-run mvn verify -B
-    - name: Set up JDK 11 for SonarCloud analysis
-      uses: actions/setup-java@v1
-      with:
-        java-version: 11
-    - name: SonarCloud analysis
+    - name: Build and analyze
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      run: mvn sonar:sonar
+      run: xvfb-run mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=3D-e-Chem_knime-sygma
